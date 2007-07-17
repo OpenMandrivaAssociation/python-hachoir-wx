@@ -12,10 +12,9 @@ Url: 		http://hachoir.org/wiki/hachoir-parser
 BuildArch:  noarch
 Requires:   python-hachoir-core
 Requires:   python-hachoir-parser
-Requires:   wxgtk2.8
+Requires:   wxpython2.6 
 
 BuildRequires: python-devel
-BuildRequires: wxGTK2.8-devel
 
 %description
 hachoir-parser is a package of most common file format parsers written 
