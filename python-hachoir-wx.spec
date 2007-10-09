@@ -1,6 +1,6 @@
 %define module_name hachoir-wx
 
-Summary:    	A user interface in WxPython for the hachoir framework.
+Summary:    	A user interface in WxPython for the hachoir framework
 Name: 		python-%{module_name}
 Version: 	0.1.2
 Release: 	%mkrel 1
