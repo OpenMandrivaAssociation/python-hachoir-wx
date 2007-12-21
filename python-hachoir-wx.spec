@@ -7,6 +7,7 @@ Release: 	%mkrel 1
 Source0: 	%{module_name}-%{version}.tar.bz2
 License:	GPL
 Group: 		Development/Python
+BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Url: 		http://hachoir.org/wiki/hachoir-parser
 BuildArch:  noarch
 Requires:   python-hachoir-core
