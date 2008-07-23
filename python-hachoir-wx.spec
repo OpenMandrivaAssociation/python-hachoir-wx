@@ -3,7 +3,7 @@
 Summary:    	A user interface in WxPython for the hachoir framework
 Name: 		python-%{module_name}
 Version: 	0.1.2
-Release: 	%mkrel 1
+Release: 	%mkrel 3
 Source0: 	%{module_name}-%{version}.tar.bz2
 License:	GPL
 Group: 		Development/Python
