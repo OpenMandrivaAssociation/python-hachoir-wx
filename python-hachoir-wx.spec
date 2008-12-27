@@ -2,19 +2,20 @@
 
 Summary:    	A user interface in WxPython for the hachoir framework
 Name: 		python-%{module_name}
-Version: 	0.1.2
-Release: 	%mkrel 3
-Source0: 	%{module_name}-%{version}.tar.bz2
-License:	GPL
+Version: 	0.3
+Release: 	%mkrel 1
+Source0: 	http://cheeseshop.python.org/packages/source/h/%{module_name}/%{module_name}-%{version}.tar.gz
+# version.py specifies GPLv2
+License:	GPLv2
 Group: 		Development/Python
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
-Url: 		http://hachoir.org/wiki/hachoir-parser
-BuildArch:  noarch
-Requires:   python-hachoir-core
-Requires:   python-hachoir-parser
-Requires:   wxpython2.6 
-
-BuildRequires: python-devel
+URL: 		http://hachoir.org/wiki/hachoir-parser
+BuildArch:	noarch
+Requires:	python-hachoir-core
+Requires:	python-hachoir-parser
+Requires:	wxPythonGTK
+%{py_requires -d}
+BuildRequires:	python-setuptools
 
 %description
 hachoir-parser is a package of most common file format parsers written 
@@ -30,19 +31,19 @@ to know *each* bit meaning. Some good (but not perfect ;-)) parsers:
     * TAR and ZIP archive 
 
 %prep
-%setup -q -n %{module_name}-%version
+%setup -q -n %{module_name}-%{version}
 
 %build
 python setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
+rm -rf %{buildroot}
+python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files -f INSTALLED_FILES
 %defattr(-,root,root)
 %doc AUTHORS COPYING README 
-%dir %py_puresitedir/hachoir_wx
+%dir %{py_puresitedir}/hachoir_wx
