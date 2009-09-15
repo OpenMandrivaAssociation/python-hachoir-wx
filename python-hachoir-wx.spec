@@ -3,7 +3,7 @@
 Summary:    	A user interface in WxPython for the hachoir framework
 Name: 		python-%{module_name}
 Version: 	0.3
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 Source0: 	http://cheeseshop.python.org/packages/source/h/%{module_name}/%{module_name}-%{version}.tar.gz
 # version.py specifies GPLv2
 License:	GPLv2
