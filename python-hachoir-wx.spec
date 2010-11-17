@@ -14,7 +14,6 @@ BuildArch:	noarch
 Requires:	python-hachoir-core
 Requires:	python-hachoir-parser
 Requires:	wxPythonGTK
-%{py_requires -d}
 BuildRequires:	python-setuptools
 
 %description
@@ -43,7 +42,8 @@ python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
 %clean
 rm -rf %{buildroot}
 
-%files -f INSTALLED_FILES
+%files
 %defattr(-,root,root)
-%doc AUTHORS COPYING README 
-%dir %{py_puresitedir}/hachoir_wx
+%doc AUTHORS COPYING README
+%{_bindir}/*
+%{py_puresitedir}/*
