@@ -47,3 +47,34 @@ rm -rf %{buildroot}
 %doc AUTHORS COPYING README
 %{_bindir}/*
 %{py_puresitedir}/*
+
+
+%changelog
+* Wed Nov 17 2010 Funda Wang <fwang@mandriva.org> 0.3-2mdv2011.0
++ Revision: 598272
+- rebuild for py2.7
+
+* Tue Sep 15 2009 Thierry Vignaud <tv@mandriva.org> 0.3-2mdv2010.0
++ Revision: 442181
+- rebuild
+
+* Sat Dec 27 2008 Adam Williamson <awilliamson@mandriva.org> 0.3-1mdv2009.1
++ Revision: 320004
+- drop wxpython2.6 dep (works fine with 2.8)
+- clean spec
+- new release 0.3
+
+* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.1.2-3mdv2009.0
++ Revision: 242417
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+- fix summary-ended-with-dot
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Tue Jul 17 2007 Jérôme Soyer <saispo@mandriva.org> 0.1.2-1mdv2008.0
++ Revision: 52879
+- Fix Build
+- Import python-hachoir-wx
+
