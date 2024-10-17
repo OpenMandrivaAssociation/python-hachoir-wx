@@ -9,7 +9,7 @@ Source0: 	http://cheeseshop.python.org/packages/source/h/%{module_name}/%{module
 License:	GPLv2
 Group: 		Development/Python
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
-URL: 		http://hachoir.org/wiki/hachoir-parser
+URL: 		https://hachoir.org/wiki/hachoir-parser
 BuildArch:	noarch
 Requires:	python-hachoir-core
 Requires:	python-hachoir-parser
